@@ -3,7 +3,7 @@ from typing import Union
 
 
 def mask_account_card(type_and_number: Union[str]) -> Union[str]:
-    """ Функция, которая маскирует номер счета или карты"""
+    """ Маскирует номер счета или карты"""
     text_result = ""
     digit_result = ""
     digit_count = 0
@@ -20,7 +20,7 @@ def mask_account_card(type_and_number: Union[str]) -> Union[str]:
 
 
 def get_date(user_date: Union[str]) -> Union[str]:
-    """Функция получения даты в определенном формате и возвращает в формате ДД.ММ.ГГГГ"""
+    """Получение даты в определенном формате и возвращает в формате ДД.ММ.ГГГГ"""
     # Добавляем импорт библиотеки datetime
     import datetime
     # Преобразуем строку в объект datetime
