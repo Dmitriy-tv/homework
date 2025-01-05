@@ -2,7 +2,8 @@ from typing import Dict, List
 
 
 def filter_by_state(last_dict: List[Dict], value_key: str = "EXECUTED") -> List[Dict]:
-    """Возвращает новый список словарей, у которых ключ соответствует указаному значению"""
+    """Возвращает новый список словарей, у которых ключ соответствует
+    указаному значению по умолчанию "EXECUTED'"""
 
     new_list_dict = []
 
