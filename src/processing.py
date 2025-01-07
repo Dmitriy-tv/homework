@@ -1,21 +1,23 @@
-from typing import Dict, List
+from typing import Dict, Any
 
 
-def filter_by_state(last_dict: List[Dict], value_key: str = "EXECUTED") -> List[Dict]:
+# Пишем функцию сортировки операций по статусу
+def filter_by_state(inform_dict: list[Dict[str, Any]], state_id: str = "EXECUTED") -> list[Dict[str, Any]]:
     """Возвращает новый список словарей, у которых ключ соответствует
     указаному значению по умолчанию "EXECUTED'"""
 
-    new_list_dict = []
+    new_list_state = []
 
-    for every_dict in last_dict:
-        if every_dict["state"] == value_key:
-            new_list_dict.append(every_dict)
-    return new_list_dict
+    for every_dict in inform_dict:
+        if every_dict["state"] == state_id:
+            new_list_state.append(every_dict)
+    return new_list_state
 
 
-def sort_by_date(list_dict: List[Dict], reverse: bool = True) -> List[Dict]:
-    """Cортировка по убыванию, т. е. сначала самые последние операции"""
-    return sorted(list_dict, key=lambda x: x["date"], reverse=reverse)
+# Пишем функцию для сортировки по дате
+def sort_by_date(inform_dict: list[Dict[str, Any]], reverse: bool = True) -> list[Dict[str, Any]]:
+    """Cортировка операций клиентов по дате"""
+    return sorted(inform_dict, key=lambda x: x["date"], reverse=reverse)
 
 
 print(filter_by_state([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},

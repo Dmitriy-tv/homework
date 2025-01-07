@@ -1,5 +1,6 @@
-from masks import get_mask_account, get_mask_card_number
 from typing import Union
+
+from masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(type_and_number: Union[str]) -> Union[str]:
@@ -23,6 +24,7 @@ def get_date(user_date: Union[str]) -> Union[str]:
     """Получение даты в определенном формате и возвращает в формате ДД.ММ.ГГГГ"""
     # Добавляем импорт библиотеки datetime
     import datetime
+
     # Преобразуем строку в объект datetime
     date_format = datetime.datetime.strptime(user_date, "%Y-%m-%dT%H:%M:%S.%f")
     # Форматируем дату в строку "ДД.ММ.ГГГГ"
