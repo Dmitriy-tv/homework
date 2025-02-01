@@ -37,6 +37,12 @@ executed_transactions = filter_by_state(transactions)
 sorted_transactions = sort_by_date(transactions)
 ```
 
+## Проверка работоспособности 
+   Результаты проверочных тестов расположены:
+```bash
+   htmlcov/index.html
+```
+
 ## Вклад
 
 Если вы хотите внести свой вклад, пожалуйста, создайте форк репозитория и отправьте пул-реквест.

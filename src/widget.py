@@ -1,9 +1,9 @@
 from typing import Union
 
-from masks import get_mask_account, get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
-def mask_account_card(type_and_number: Union[str]) -> Union[str]:
+def mask_account_card(type_and_number: Union[str, int]) -> Union[str]:
     """ Маскирует номер счета или карты"""
     text_result = ""
     digit_result = ""
@@ -20,7 +20,7 @@ def mask_account_card(type_and_number: Union[str]) -> Union[str]:
         return f"{text_result} {get_mask_card_number(digit_result)}"
 
 
-def get_date(user_date: Union[str]) -> Union[str]:
+def get_date(user_date: Union[str, int]) -> Union[str]:
     """Получение даты в определенном формате и возвращает в формате ДД.ММ.ГГГГ"""
     # Добавляем импорт библиотеки datetime
     import datetime
