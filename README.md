@@ -37,11 +37,12 @@ executed_transactions = filter_by_state(transactions)
 sorted_transactions = sort_by_date(transactions)
 ```
 
-## Проверка работоспособности 
-   Результаты проверочных тестов расположены:
-```bash
-   htmlcov/index.html
-```
+## Тестирование
+Проект покрыт тестами. Для запуска тестов выполните команду:
+```poetry run pytest --cov```
+
+Тесты выполняют проверку работоспособности кода и сокращают количество ошибок.
+
 
 ## Вклад
 
