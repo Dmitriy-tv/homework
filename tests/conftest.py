@@ -11,4 +11,3 @@ def fixture_filter_by_state():
 @pytest.fixture
 def fixture_sort_by_date():
     return sort_by_date
-

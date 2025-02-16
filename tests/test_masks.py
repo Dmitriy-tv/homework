@@ -13,7 +13,6 @@ from src.masks import get_mask_card_number, get_mask_account
         ("9120384756152749", "9120 38** **** 2749")
     ]
 )
-
 def test_get_mask_card_number(value, expected):
     assert get_mask_card_number(value) == expected
 
@@ -28,8 +27,6 @@ def test_get_mask_card_number(value, expected):
         ("Visa Classic", "Не верно введен номер карты")
     ]
 )
-
-
 def test_get_mask_card_number_invalid(input_error, result):
     assert get_mask_card_number(input_error) == result
 
@@ -44,7 +41,6 @@ def test_get_mask_card_number_invalid(input_error, result):
         ("91203847184656152749", "**2749")
     ]
 )
-
 def test_get_mask_account(input_user, conclusion):
     assert get_mask_account(input_user) == conclusion
 
@@ -59,7 +55,5 @@ def test_get_mask_account(input_user, conclusion):
         ("Visa Classic", "Не верно введен номер счета")
     ]
 )
-
-
 def test_get_mask_account_invalid(input_user_error, conclusion_error):
     assert get_mask_account(input_user_error) == conclusion_error
