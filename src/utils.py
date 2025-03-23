@@ -1,9 +1,18 @@
 import json
+import logging
 import os.path
 from typing import List
-from venv import logger
 
 from src.external_api import currency_conversion
+
+logger = logging.getLogger("utils")
+file_handler = logging.FileHandler(
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "../logs", "utils.log"), mode="w"
+)
+file_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
+logger.setLevel(logging.INFO)
 
 
 def data_transactions(way: str) -> List[dict]:
