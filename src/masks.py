@@ -13,7 +13,7 @@ logger.setLevel(logging.INFO)
 logger.setLevel(logging.ERROR)
 
 
-def get_mask_card_number(card_num: Union[str, int]) -> Union[str]:
+def get_mask_card_number(card_num: Union[str]) -> Union[str]:
     """Скрывает часть введенного номера карты"""
     if not card_num:
         logger.error("Номер карты пустой")
@@ -29,7 +29,7 @@ def get_mask_card_number(card_num: Union[str, int]) -> Union[str]:
 print(get_mask_card_number(input("Введите номер карты")))
 
 
-def get_mask_account(account_num: Union[str, int]) -> Union[str]:
+def get_mask_account(account_num: Union[str]) -> Union[str]:
     """Оставляет последние 4 цифры номера счета"""
     if not account_num:
         logger.error("Номер счета пустой")
