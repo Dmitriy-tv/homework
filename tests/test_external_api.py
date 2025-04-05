@@ -3,11 +3,9 @@ import os
 from unittest.mock import MagicMock, Mock, patch
 
 import requests
-from dotenv import load_dotenv
 
 from src.external_api import currency_conversion
 
-load_dotenv(".env")
 
 API_KEY = os.getenv("API_KEY")
 

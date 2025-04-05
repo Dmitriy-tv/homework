@@ -17,7 +17,7 @@ def get_mask_card_number(card_num: Union[str]) -> Union[str]:
     """Скрывает часть введенного номера карты"""
     if not card_num:
         logger.error("Номер карты пустой")
-        return "0"
+        return "Номер карты пустой"
     elif len(card_num) != 16:
         logger.error("Не верно введен номер карты")
         return "Не верно введен номер карты"
@@ -26,14 +26,14 @@ def get_mask_card_number(card_num: Union[str]) -> Union[str]:
         return f"{card_num[:4]} {card_num[4:6]}** **** {card_num[-4:]}"
 
 
-print(get_mask_card_number(input("Введите номер карты")))
+# print(get_mask_card_number(input("Введите номер карты")))
 
 
 def get_mask_account(account_num: Union[str]) -> Union[str]:
     """Оставляет последние 4 цифры номера счета"""
     if not account_num:
         logger.error("Номер счета пустой")
-        return "0"
+        return "Номер счета пустой"
     elif len(account_num) != 20:
         logger.error("Не верно введен номер счета")
         return "Не верно введен номер счета"
@@ -42,4 +42,4 @@ def get_mask_account(account_num: Union[str]) -> Union[str]:
         return f"**{account_num[-4:]}"
 
 
-print(get_mask_account(input("Введите номер счета")))
+# print(get_mask_account(input("Введите номер счета")))
