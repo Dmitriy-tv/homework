@@ -1,6 +1,5 @@
 from src.widget import mask_account_card, get_date
 
-
 def test_mask_account_card():
     assert mask_account_card("Visa Platinum 7000792289606361") == "VisaPlatinum 7000 79** **** 6361"
 
