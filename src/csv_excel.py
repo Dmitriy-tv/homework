@@ -1,4 +1,5 @@
 import csv
+
 import pandas as pd
 
 
@@ -35,8 +36,8 @@ def read_financial_operations_csv(file_path):
 
 
 # Пример использования
-file_path = "transactions.csv"
-operations = read_financial_operations_csv(file_path)
+file_path_1 = "transactions.csv"
+operations = read_financial_operations_csv(file_path_1)
 print(operations)
 
 
