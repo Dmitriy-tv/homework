@@ -1,7 +1,7 @@
-from typing import Generator, Any, Iterable, Dict, Iterator
+from typing import Any, Dict, Generator, Iterable, Iterator
 
 
-def filter_by_currency(transactions: Iterator[Dict[str, Any]], currency: str = "USD"
+def filter_by_currency(transactions: list[Dict[str, Any]], currency: str = "USD"
                        ) -> Generator[dict[str, Any], None, None]:
     """
     Поочередно выдает транзакции, где валюта операции соответствует заданной (например, USD).
